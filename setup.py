@@ -5,11 +5,9 @@ import numpy as np
 import os
 import tempfile, subprocess, shutil
 
-DISTNAME='pyqg'
-URL='http://github.com/pyqg/pyqg'
-AUTHOR='pyqg team'
-AUTHOR_EMAIL='pyqg-dev@googlegroups.com'
-LICENSE='MIT'
+DISTNAME='pyqgtest'
+URL='http://github.com/ridunn/pyqgtest'
+AUTHOR='pyqg team, Ria Dunn'
 
 DESCRIPTION='python quasigeostrophic model'
 LONG_DESCRIPTION="""
@@ -65,7 +63,7 @@ install_requires = [
 ]
 
 # This hack tells cython whether pyfftw is present
-use_pyfftw_file = 'pyqg/.compile_time_use_pyfftw.pxi'
+use_pyfftw_file = 'pyqgtest/.compile_time_use_pyfftw.pxi'
 with open(use_pyfftw_file, 'wb') as f:
     try:
         import pyfftw
@@ -141,8 +139,8 @@ def local_scheme(version):
     return ""
 
 ext_module = Extension(
-    "pyqg.kernel",
-    ["pyqg/kernel.pyx"],
+    "pyqgtest.kernel",
+    ["pyqgtest/kernel.pyx"],
     extra_compile_args=extra_compile_args,
     extra_link_args=extra_link_args,
 )
@@ -153,9 +151,7 @@ setup(name=DISTNAME,
       long_description=LONG_DESCRIPTION,
       url=URL,
       author=AUTHOR,
-      author_email=AUTHOR_EMAIL,
-      license=LICENSE,
-      packages=['pyqg'],
+      packages=['pyqgtest'],
       install_requires=install_requires,
       setup_requires=["setuptools_scm"],
       use_scm_version={"local_scheme": local_scheme},
