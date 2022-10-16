@@ -18,6 +18,6 @@ coverage:
 ignore:
   - "setup.py"
   - "versioneer.py"
-  - "pyqg/tests/*"
-  - "pyqg/__init__.py"
-  - "pyqg/_version.py"
+  - "pyqgtest/tests/*"
+  - "pyqgtest/__init__.py"
+  - "pyqgtest/_version.py"
