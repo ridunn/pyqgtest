@@ -1,4 +1,4 @@
-name: test_env_pyqg
+name: test_env_pyqgtest
 dependencies:
   - python=3.9
   - numpy
