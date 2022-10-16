@@ -1,4 +1,4 @@
-import pyqg
+import pyqgtest
 import time
 import cProfile
 import pstats
@@ -22,7 +22,7 @@ for j, nx in enumerate(mynx):
     #    (True, 2), (True, 4), (True, 8)]):
     for i, nth in enumerate(mynth):
 
-        m = pyqg.QGModel(nx=nx, tmax=tmax, dt=dt, ntd=nth,
+        m = pyqgtest.QGModel(nx=nx, tmax=tmax, dt=dt, ntd=nth,
                          # no output    
                          twrite=np.inf,
                          # no time average
